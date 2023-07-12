@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.ProfilePage"
+             Title="Profile">
+    <VerticalStackLayout Spacing="0" Padding="30">
+
+        <Image
+                Source="avatar.png"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+
+        <Label Text="User Name" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="30" Margin="0"/>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="Doğa Ünal" Placeholder="UserName" HorizontalOptions="Start" TextColor="Gray" FontAttributes="Bold" VerticalOptions="Center" WidthRequest="350"/>
+
+            <Button
+                x:Name="EditBtn1"
+                Text="Edit"                               
+                WidthRequest="80"               
+                TextColor="Black"
+                FontAttributes="Bold"
+                BackgroundColor="Red"
+                HorizontalOptions="End" />
+        </Grid>
+
+
+        <Label Text="Password" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="30" Margin="0"/>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="********" Placeholder="Password" TextColor="Gray" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="350"/>
+
+            <Button
+                x:Name="EditBtn2"
+                Text="Edit"                               
+                WidthRequest="80"               
+                TextColor="Black"
+                FontAttributes="Bold"
+                BackgroundColor="Red"
+                HorizontalOptions="End" />
+        </Grid>
+        
+
+        <Label Text="Email Address" HorizontalOptions="Center" FontSize="Subtitle" FontAttributes="Bold" Padding="30" Margin="0"/>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry Text="doga.unal4635@gmail.com" Placeholder="Email" TextColor="Gray" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="350"/>
+
+            <Button
+                x:Name="EditBtn3"
+                Text="Edit"                               
+                WidthRequest="80"               
+                TextColor="Black"
+                FontAttributes="Bold"
+                BackgroundColor="Red"
+                HorizontalOptions="End" />
+        </Grid>
+        
+
+
+    </VerticalStackLayout>
+</ContentPage>
