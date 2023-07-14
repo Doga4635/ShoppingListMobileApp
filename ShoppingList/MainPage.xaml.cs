@@ -1,4 +1,9 @@
-﻿namespace ShoppingList;
+﻿using ShoppingList;
+using Microsoft.Maui.Controls;
+using System;
+
+
+namespace ShoppingList;
 
 public partial class MainPage : ContentPage
 {
@@ -21,7 +26,12 @@ public partial class MainPage : ContentPage
         SemanticScreenReader.Announce(SignInBtn.Text);
     }
 
-private async void GoToProfile(object sender, EventArgs e)
+    private void OnButtonClick(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new RegisterPageView());
+    }
+
+    private async void GoToProfile(object sender, EventArgs e)
 		{
 		await Shell.Current.GoToAsync("Profile");
 	}

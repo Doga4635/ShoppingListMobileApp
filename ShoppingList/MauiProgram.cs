@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using ShoppingList.ViewModels;
+using ShoppingList.Views;
 
 namespace ShoppingList;
 
@@ -15,8 +17,16 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		builder.Services.AddSingleton<HomePage>();
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<ContactPage>();
+        builder.Services.AddSingleton<AboutPage>();
+        builder.Services.AddSingleton<RegisterPageView>();
+
+        builder.Services.AddSingleton<LoginPageViewModel>();
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();
